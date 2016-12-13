@@ -1,4 +1,4 @@
-from django.conf import settings
+Ufrom django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -79,7 +79,7 @@ class APNSDevice(BaseDevice):
     Represents an iOS device
     """
 
-    device_id = models.UUIField(_('Device ID'), blank=True, null=True,
+    device_id = models.UUIDField(_('Device ID'), blank=True, null=True,
             db_index=True)
     registration_id = models.CharField(_('Registration ID'), max_length=64,
             unique=True)
